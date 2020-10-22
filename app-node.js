@@ -18,7 +18,8 @@ let server = http.createServer(function (req, res) {
   } else if (req.requrl.pathname === '/factorial') {
     require('./factorial-node').get(req, res);
   } else if (req.requrl.pathname === '/fibonacci') {
-    require('./fibonacci-node').get(req, res);
+    // require('./fibonacci-node').get(req, res);
+    require('./fibo2-node').get(req, res);
   } else {
     // 404 状态码 指示页面不存在
     res.writeHead(404, {
